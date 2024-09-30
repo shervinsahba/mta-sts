@@ -14,10 +14,14 @@
       mx: your-mx-record-here.com
       max_age: 604800
 ```
-Here you want to edit in your MX records from your DNS. For the mode, enforce is the end goal, but you can set to testing at first.
+Edit in your MX records from your DNS. For the mode, enforce is the end goal, but you can set to testing at first.
+
 3. At your DNS provider, create a CNAME record with **Host:** `mta-sts` and **Value:** `your-github-username.github.io`
+
 4. On the GitHub repo go to Settings and then Pages. Set the source to the `main` branch and save
+
 5. Under custom domain enter `mta-sts.yourdomain.com` and save
+
 6. Wait a few minutes and then refresh the page so you can enable **Enforce HTTPS**
 
 You should now see the MTA-STS policy at https://mta-sts.yourdomain.com/.well-known/mta-sts.txt
